@@ -15,10 +15,13 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pay Flow',
-      theme: ThemeData(  
-        primaryColor: AppColors.primary,       
-      ),
-      home: LoginPage(),
+      theme: ThemeData(primaryColor: AppColors.primary),
+      initialRoute: "/splash",
+      routes: {
+        "/splash" : (context) => SplashPage(),
+        "/home" : (context) => HomePage(),
+        "/login" : (context) => LoginPage()
+      },
     );
   }
 }
