@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:payflow/main.dart';
+import 'package:flutter/services.dart';
 
 
 
@@ -13,6 +13,13 @@ class AppFirebase extends StatefulWidget {
   @override
   _AppFirebaseState createState() => _AppFirebaseState();
 }
+
+      AppWidget(){
+        SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitDown,
+        DeviceOrientation.portraitUp,
+     ]);
+    }
 
 class _AppFirebaseState extends State<AppFirebase> {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
