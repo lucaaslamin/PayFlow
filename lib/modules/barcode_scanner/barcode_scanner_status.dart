@@ -6,9 +6,7 @@ class BarcodeScannerStatus {
   final String barcode;
   final bool stopScanner;
 
-  CameraController? cameraController;
-
- BarcodeScannerStatus({
+  BarcodeScannerStatus({
     this.isCameraAvailable = false,
     this.error = "",
     this.barcode = "",
@@ -32,4 +30,3 @@ class BarcodeScannerStatus {
 
   bool get hasBarcode => barcode.isNotEmpty;
 }
-
